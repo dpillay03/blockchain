@@ -9,9 +9,10 @@ class Block:
     nonce = 0
     previous_hash = 0x0
     timestamp = datetime.datetime.now()
+
     def __init__(self, data):
         self.data = data
-  
+
     def hash(self):
         h = hashlib.sha256()
         h.update(
@@ -27,16 +28,22 @@ class Block:
         return "Block Hash: " + str(self.hash()) + "\nBlockNo: " + str(self.blockNo) + "\nBlock Data: " + str(self.data) + "\nHashes: " + str(self.nonce) + "\n--------------"
 
 class Blockchain:
+
     diff = 20
     maxNonce = 2**32
     target = 2 ** (256-diff)
+
     block = Block("Genesis")
-    head = block
+    dummy = head = block
+
     def add(self, block):
+
         block.previous_hash = self.block.hash()
         block.blockNo = self.block.blockNo + 1
+
         self.block.next = block
         self.block = self.block.next
+
     def mine(self, block):
         for n in range(self.maxNonce):
             if int(block.hash(), 16) <= self.target:
@@ -45,6 +52,7 @@ class Blockchain:
                 break
             else:
                 block.nonce += 1
+
 blockchain = Blockchain()
 
 for n in range(10):
