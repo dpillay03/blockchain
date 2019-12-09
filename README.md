@@ -5,17 +5,10 @@
 The best way to learn is to do! I will be building an application which transfers data with blockchain. 
 
 #### Built with
-*I will fill this in once project is complete*
+Python
 
 #### Prerequisites
-*I will fill this in once project is complete*
-
-#### Install Directions
-*I will fill this in once project is complete*
-
-#### Deployment Directions
-*I will fill this in once project is complete*
+Python3
 
 #### Acknowledgments
-This project was inspired by [Hackernoons: Learn Blockchains by Building One](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46) by [Daniel van Flyman](https://hackernoon.com/@dvf)
-
+This project was inspired by [HowCodeORG's](https://github.com/howCodeORG/Simple-Python-Blockchain) explanation of a simple Blockchain with Python
